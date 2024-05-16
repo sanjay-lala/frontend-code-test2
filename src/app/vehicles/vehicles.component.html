@@ -1,0 +1,10 @@
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+<div class="vehicles" [@fadeInStagger]="loadedVehicles">
+    <app-vehicle-details class="vehicles__vehicle-card" *ngFor="let vehicle of loadedVehicles" [vehicle]="vehicle"  (showDetailsClicked)="openModal(vehicle)"></app-vehicle-details>
+</div>
+
+<app-base-modal *ngIf="isModalOpen" (closeModal)="onCloseModal()" [@openClose]="isModalOpen">
+    <app-vehicle-modal (closeModal)="onCloseModal()" [vehicle]="selectedVehicle"></app-vehicle-modal>
+</app-base-modal>
+

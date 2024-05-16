@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Patrick+Hand&display=swap');
+
+* {
+    font-family: "Noto Sans JP", sans-serif;
+     margin:  0;
+}
+
+.vehicle-card {
+    display: flex;
+    height: 140px;
+}
+
+.vehicle-card__content {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vehicle-card__image-container {
+    display: flex;
+    align-items: center;
+}
+
+.vehicle-card__image-container .vehicle-card__image {
+    height: 100%;
+    width: 160px;
+    object-fit: cover;
+}
+
+.vehicle-card__image-container .vehicle-card__image--large {
+    display: none;
+}
+
+.vehicle-card__image-container .vehicle-card__image--small {
+    display: block;
+}
+
+.vehicle-card__name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+.vehicle-card__price {
+    color: grey;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+.vehicle-card__description {
+    color: grey;
+    font-size: 0.8em;
+    margin-top: 10px
+}
+
+.vehicle-card__button {
+    font-size: 0.8em;
+    margin-top: 5px;
+    color: grey;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    padding:  0;
+    text-decoration: underline;
+}
+
+.vehicle-card__button:hover {
+    color: darkgray;
+}
+
+@media screen and (min-width: 768px) {
+    .vehicle-card {
+        flex-direction: column;
+        min-height: 380px;
+    }
+
+    .vehicle-card__image-container .vehicle-card__image--small{
+        display: none;
+    }
+
+    .vehicle-card__image-container .vehicle-card__image--large {
+        display: block;
+    }
+
+    .vehicle-card__image-container .vehicle-card__image {
+        height: 200px;
+        width: 100%;
+    }
+
+    .vehicle-card__content {
+        text-align: center;
+        padding: 30px;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .vehicle-card__name--bordered {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .vehicle-card__name {
+        margin-bottom: 20px;
+    }
+
+    .vehicle-card__description {
+        margin-top: 0px;
+    }
+
+    .vehicle-card__price {
+        margin-bottom: 10px;
+        font-size: 0.70em;
+    }
+
+    .vehicle-card__button {
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .vehicle-card__content {
+        padding: 20px;
+    }
+}

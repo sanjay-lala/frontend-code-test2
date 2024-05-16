@@ -1,0 +1,39 @@
+<div class="vehicle-modal" role="dialog">
+    <div class="vehicle-modal__close">
+        <span class="vehicle-modal__button--close" (click)="onCloseModal()">&times;</span>
+    </div>
+    <div class="vehicle-modal__header">
+        <h3 class="vehicle-modal__name">{{ vehicle.name }} ({{ vehicle.modelYear }})</h3>
+        <p class="vehicle-modal__description">{{ vehicle.details.description }}</p>
+        <h5 class="vehicle-modal__price" *ngIf="vehicle.details.price">From {{ vehicle.details.price }}</h5>
+        <h5 class="vehicle-modal__price" *ngIf="!vehicle.details.price">Enquire in-store</h5>
+    </div>
+    
+    <div class="vehicle-modal__details-list">
+        <div class="vehicle-modal__detail-block">
+            <h5 class="vehicle-modal__detail-header">Bodystyles</h5>
+            <ul class="vehicle-modal__detail-list" role="list">
+                <li class="vehicle-modal__detail-text" *ngFor="let style of vehicle.details.meta.bodystyles">
+                    {{ style }}
+                </li>
+            </ul>
+        </div>
+        <div class="vehicle-modal__detail-block">
+            <h5 class="vehicle-modal__detail-header">Drivetrain</h5>
+            <ul class="vehicle-modal__detail-list" role="list">
+                <li class="vehicle-modal__detail-text" *ngFor="let train of vehicle.details.meta.drivetrain">
+                    {{ train }}
+                </li>
+            </ul>
+        </div>
+        <div class="vehicle-modal__detail-block">
+            <h5 class="vehicle-modal__detail-header">Emissons</h5>
+            <p class="vehicle-modal__detail-text">{{ emissionString }}</p>
+        </div>
+        <div class="vehicle-modal__detail-block">
+            <h5 class="vehicle-modal__detail-header">Passengers</h5>
+            <p class="vehicle-modal__detail-text">{{ vehicle.details.meta.passengers }}</p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Patrick+Hand&display=swap');
+
+* {
+	font-family: "Noto Sans JP", sans-serif;
+	color:  grey;
+}
+
+.vehicle-modal {
+	position: relative;
+}
+
+.vehicle-modal__close {
+	position: absolute;
+	top: 0;
+	right:  0;
+}
+
+.vehicle-modal__header {
+	display: block;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 1;
+
+}
+
+.vehicle-modal__name {
+ 	font-size: 1.8em;
+ 	margin: 0;
+ 	text-transform: uppercase;
+ 	color: black;
+ 	text-align: center;
+ 	flex-grow: 1;
+ 	text-align: center;
+ 	text-decoration: underline;
+}
+
+.vehicle-modal__description {
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: center;
+}
+
+.vehicle-modal__price {
+	font-size: 1em;
+	text-align: center;
+	margin: 15px;
+}
+
+.vehicle-modal__button--close {
+	align-self: flex-start;
+
+}
+
+.modal-description {
+ 	font-size: 0.8em;
+ 	font-style: italic;
+}
+
+.vehicle-modal__details-list {
+ 	display: grid;
+ 	gap: 1em;
+ 	grid-template-columns: 50% 50%;
+}
+
+.vehicle-modal__detail-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.vehicle-modal__detail-header {
+ 	margin: 0;
+}
+
+.vehicle-modal__detail-text {
+ 	margin: 0;
+ 	font-size: 0.8em;
+ 	text-transform: capitalize;
+}
+
+.vehicle-modal__button--close {
+ 	color: lightgray;
+ 	font-size: 28px;
+ 	font-weight: bold;
+}
+
+.vehicle-modal__button--close:hover,
+.vehicle-modal__button--close:focus {
+ 	color: gray;
+ 	text-decoration: none;
+ 	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+	.vehicle-modal__details-list {
+		gap: 2em;
+	 }
+}
