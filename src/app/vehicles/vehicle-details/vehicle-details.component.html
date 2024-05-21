@@ -6,7 +6,7 @@
     <div class="vehicle-card__content">
         <div class="vehicle-card__details">
             <h5 class="vehicle-card__name"><span class="vehicle-card__name--bordered">{{ vehicle.name }}</span></h5>
-            <p class="vehicle-card__price" *ngIf="vehicle.details.price">From: {{ vehicle.details.price }}</p>
+            <p class="vehicle-card__price" *ngIf="vehicle.details.price">From {{ vehicle.details.price }}</p>
             <p class="vehicle-card__price" *ngIf="!vehicle.details.price">Enquire in-store</p>
             <p class="vehicle-card__description">{{ vehicle.details.description }}</p>
         </div>
